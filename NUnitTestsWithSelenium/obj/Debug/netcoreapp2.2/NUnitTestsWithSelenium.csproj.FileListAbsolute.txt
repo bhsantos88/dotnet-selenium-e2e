@@ -1,0 +1,15 @@
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.deps.json
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.runtimeconfig.json
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.runtimeconfig.dev.json
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.dll
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.csprojAssemblyReference.cache
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.csproj.CoreCompileInputs.cache
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.AssemblyInfoInputs.cache
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.AssemblyInfo.cs
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.pdb
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.dll
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.pdb
+E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\chromedriver.exe

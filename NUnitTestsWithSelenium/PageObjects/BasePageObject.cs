@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Collections.Generic;
 
 namespace NUnitTestsWithSelenium.PageObjects
 {
@@ -18,61 +19,38 @@ namespace NUnitTestsWithSelenium.PageObjects
         ByValue,
         ByIndex
     }
+
     public abstract class BasePageObject<T>
     {
-        private readonly IWebDriver webDriver;
+        public readonly IWebDriver webDriver;
+        public readonly string defaultUrl;
 
-        public BasePageObject(IWebDriver webDriver)
+        public BasePageObject(IWebDriver webDriver, string defaultUrl)
         {
             this.webDriver = webDriver ?? throw new ArgumentNullException();
+            this.defaultUrl = defaultUrl ?? throw new ArgumentNullException();
         }
 
-        public void Click(string element, ElementType type)
+        public string GetDropdownSelectedOption(IWebElement webElement)
         {
-            IWebElement webElement = GetElement(element, type);
-            webElement.Click();
+            SelectElement selectElement = new SelectElement(webElement);
+            return selectElement.SelectedOption.Text;
         }
-        public void EnterValue(string element, string value, ElementType type)
+        public IList<IWebElement> GetDropdownAllSelectedOptions(IWebElement webElement)
         {
-            IWebElement webElement = GetElement(element, type);
-            webElement.SendKeys(value);
+            SelectElement selectElement = new SelectElement(webElement);
+            return selectElement.AllSelectedOptions;
         }
-        public IWebElement GetElement(string element, ElementType type)
+        public string GetText(IWebElement webElement)
         {
-            IWebElement webElement = null;
-
-            switch (type)
-            {
-                case ElementType.ClassName:
-                    webElement = webDriver.FindElement(By.ClassName(element));
-                    break;
-                case ElementType.CssSelector:
-                    webElement = webDriver.FindElement(By.CssSelector(element));
-                    break;
-                case ElementType.Id:
-                    webElement = webDriver.FindElement(By.Id(element));
-                    break;
-                case ElementType.Name:
-                    webElement = webDriver.FindElement(By.Name(element));
-                    break;
-                default:
-                    break;
-            }
-
-            return webElement;
+            return webElement.GetAttribute("value");
         }
-        public void NavigateTo(string url)
+        public void NavigateTo()
         {
-            webDriver.Navigate().GoToUrl(url);
+            webDriver.Navigate().GoToUrl(defaultUrl);
         }
-        public string ReadValue(string element, ElementType type)
+        public void SetDropdownSelection(IWebElement webElement, string value, DropdrownSelection dropdrownSelection)
         {
-            IWebElement webElement = GetElement(element, type);
-            return webElement.Text;
-        }
-        public void SelectDropDown(string element, string value, ElementType type, DropdrownSelection dropdrownSelection)
-        {
-            IWebElement webElement = GetElement(element, type);
             SelectElement selectElement = new SelectElement(webElement);
 
             switch (dropdrownSelection)
@@ -91,6 +69,14 @@ namespace NUnitTestsWithSelenium.PageObjects
                 default:
                     break;
             }
+        }
+        public void SetText(IWebElement webElement, string value)
+        {
+            webElement.SendKeys(value);
+        }
+        public void Submit(IWebElement webElement)
+        {
+            webElement.Submit();
         }
     }
 }

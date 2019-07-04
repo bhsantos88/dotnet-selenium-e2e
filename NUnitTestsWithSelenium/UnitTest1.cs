@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using NUnitTestsWithSelenium;
 using NUnitTestsWithSelenium.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -11,7 +10,9 @@ namespace Tests
     {
         // Create the reference for the browser.
         IWebDriver driver;
-        
+        string loginFormUrl = "http://executeautomation.com/demosite/Login.html";
+        string userFormUrl = "http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login";
+
         // This function will run one time before the first test.
         [OneTimeSetUp]
         public void OneTimeSetup()
@@ -41,28 +42,42 @@ namespace Tests
         }
 
         [Test]
-        [TestCase("TitleId", "Mr.", ExpectedResult = "Mr.")]
-        [TestCase("TitleId", "Ms.", ExpectedResult = "Ms.")]
-        public string TestDropDownSelection(string id, string value)
+        [TestCase("Mr.", ExpectedResult = "Mr.")]
+        [TestCase("Ms.", ExpectedResult = "Ms.")]
+        public string TestDropDownSelection(string value)
         {
-            UserFormPage userForm = new UserFormPage(driver);
-            userForm.NavigateTo("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
-            userForm.SelectDropDown(id, value, ElementType.Id, DropdrownSelection.ByText);
+            UserFormPageObject userForm = new UserFormPageObject(driver, userFormUrl);
 
-            string res = userForm.ReadValue(id, ElementType.Id);
+            userForm.NavigateTo();
+            userForm.SetDropdownSelection(userForm.ddlTitleId, value, DropdrownSelection.ByText);
 
+            string res = userForm.GetDropdownSelectedOption(userForm.ddlTitleId);
             return res;
         }
 
         [Test]
-        public void TestFillFields()
+        [TestCase("Mr.", "BH", "Bruno", "Henrique")]
+        [TestCase("Mr.", "MM", "Muster", "Müller")]
+        public void TestFillUserForm(string titleId, string initial, string firstName, string middleName)
         {
-            UserFormPage userForm = new UserFormPage(driver);
-            userForm.NavigateTo("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
-            
-            userForm.SelectDropDown("TitleId", "Mr.", ElementType.Id, DropdrownSelection.ByText);
-            userForm.EnterValue("Initial", "New name", ElementType.Name);
-            userForm.Click("Save", ElementType.Name);
+            UserFormPageObject userFormPage = new UserFormPageObject(driver, userFormUrl);
+            userFormPage.NavigateTo();
+
+            userFormPage.FillUserForm(titleId, initial, firstName, middleName);
+            userFormPage.Submit(userFormPage.btnSave);
+
+            //string fieldValue = userFormPage.GetText(userFormPage.txtInitial);
+        }
+
+        [Test]
+        public void PerformE2ETests()
+        {
+            LoginPageObject loginPage = new LoginPageObject(driver, loginFormUrl);
+            loginPage.NavigateTo();
+            loginPage.Login("test", "123");
+
+            UserFormPageObject userFormPage = new UserFormPageObject(driver, userFormUrl);
+            userFormPage.FillUserForm("Mr.", "BH", "Bruno", "Henrique");
         }
     }
 }

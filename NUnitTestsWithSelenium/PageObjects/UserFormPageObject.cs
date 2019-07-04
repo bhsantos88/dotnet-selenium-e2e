@@ -20,7 +20,8 @@ namespace NUnitTestsWithSelenium.PageObjects
             SetDropdownSelection(ddlTitleId, titleId, DropdrownSelection.ByText);
             SetText(txtInitial, initial);
             SetText(txtFirstName, firstName);
-            SetText(txtMiddleName, middleName);            
+            SetText(txtFirstName, firstName);
+            SetText(txtMiddleName, middleName);
         }
     }
 }

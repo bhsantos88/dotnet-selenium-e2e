@@ -64,7 +64,7 @@ namespace Tests
             userFormPage.NavigateTo();
 
             userFormPage.FillUserForm(titleId, initial, firstName, middleName);
-            userFormPage.Submit(userFormPage.btnSave);
+            userFormPage.btnSave.Submit();
 
             //string fieldValue = userFormPage.GetText(userFormPage.txtInitial);
         }

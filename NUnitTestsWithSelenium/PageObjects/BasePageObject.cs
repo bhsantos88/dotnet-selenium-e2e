@@ -31,27 +31,31 @@ namespace NUnitTestsWithSelenium.PageObjects
             this.defaultUrl = defaultUrl ?? throw new ArgumentNullException();
         }
 
-        public string GetDropdownSelectedOption(IWebElement webElement)
+        public string GetDropdownSelectedOption(IWebElement element)
         {
-            SelectElement selectElement = new SelectElement(webElement);
+            SelectElement selectElement = new SelectElement(element);
             return selectElement.SelectedOption.Text;
         }
-        public IList<IWebElement> GetDropdownAllSelectedOptions(IWebElement webElement)
+        public IList<IWebElement> GetDropdownAllSelectedOptions(IWebElement element)
         {
-            SelectElement selectElement = new SelectElement(webElement);
+            SelectElement selectElement = new SelectElement(element);
             return selectElement.AllSelectedOptions;
         }
-        public string GetText(IWebElement webElement)
+        public string GetText(IWebElement element)
         {
-            return webElement.GetAttribute("value");
+            return element.GetAttribute("value");
         }
         public void NavigateTo()
         {
             webDriver.Navigate().GoToUrl(defaultUrl);
         }
-        public void SetDropdownSelection(IWebElement webElement, string value, DropdrownSelection dropdrownSelection)
+        public void SetText(IWebElement element, string value)
         {
-            SelectElement selectElement = new SelectElement(webElement);
+            element.SendKeys(value);
+        }
+        public void SetDropdownSelection(IWebElement element, string value, DropdrownSelection dropdrownSelection)
+        {
+            SelectElement selectElement = new SelectElement(element);
 
             switch (dropdrownSelection)
             {
@@ -70,13 +74,9 @@ namespace NUnitTestsWithSelenium.PageObjects
                     break;
             }
         }
-        public void SetText(IWebElement webElement, string value)
+        public void Submit(IWebElement element)
         {
-            webElement.SendKeys(value);
-        }
-        public void Submit(IWebElement webElement)
-        {
-            webElement.Submit();
+            element.Submit();
         }
     }
 }

@@ -5900,11 +5900,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\Automation Tests\\UI\\NUnitTestsWithSelenium\\NUnitTestsWithSelenium.csproj",
+      "projectUniqueName": "C:\\Users\\BRUNO-DEV\\Desktop\\Selenium-Samples\\dotnet-selenium-e2e\\NUnitTestsWithSelenium\\NUnitTestsWithSelenium.csproj",
       "projectName": "NUnitTestsWithSelenium",
-      "projectPath": "E:\\Projects\\Automation Tests\\UI\\NUnitTestsWithSelenium\\NUnitTestsWithSelenium.csproj",
+      "projectPath": "C:\\Users\\BRUNO-DEV\\Desktop\\Selenium-Samples\\dotnet-selenium-e2e\\NUnitTestsWithSelenium\\NUnitTestsWithSelenium.csproj",
       "packagesPath": "C:\\Users\\BRUNO-DEV\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\Automation Tests\\UI\\NUnitTestsWithSelenium\\obj\\",
+      "outputPath": "C:\\Users\\BRUNO-DEV\\Desktop\\Selenium-Samples\\dotnet-selenium-e2e\\NUnitTestsWithSelenium\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

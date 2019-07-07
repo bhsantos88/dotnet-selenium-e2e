@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using NUnitTestsWithSelenium.PageObjects;
+using NUnitTestsWithSelenium.TableHelpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.IO;
@@ -78,6 +79,21 @@ namespace Tests
 
             UserFormPageObject userFormPage = new UserFormPageObject(driver, userFormUrl);
             userFormPage.FillUserForm("Mr.", "BH", "Bruno", "Henrique");
+        }
+
+        [Test]
+        public void ReadTableValues()
+        {
+            //Arrange
+            TablePageObject tableObject = new TablePageObject(driver, "https://getbootstrap.com/docs/4.1/content/tables/");
+            tableObject.NavigateTo();
+            
+            // Act
+            TableHandler tableHandler = new TableHandler(tableObject.table);
+            var value = tableHandler.ReadCell("First", 2);
+
+            //Assert
+            Assert.That(Is.Equals("Jacob", value));
         }
     }
 }

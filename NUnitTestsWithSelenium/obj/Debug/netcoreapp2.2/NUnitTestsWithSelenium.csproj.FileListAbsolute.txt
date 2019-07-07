@@ -13,3 +13,18 @@ E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\N
 E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.dll
 E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.pdb
 E:\Projects\Automation Tests\UI\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\chromedriver.exe
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.csprojAssemblyReference.cache
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.csproj.CoreCompileInputs.cache
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.AssemblyInfoInputs.cache
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.AssemblyInfo.cs
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.dll
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\obj\Debug\netcoreapp2.2\NUnitTestsWithSelenium.pdb
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\chromedriver.exe
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.deps.json
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.runtimeconfig.json
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.runtimeconfig.dev.json
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.dll
+C:\Users\BRUNO-DEV\Desktop\Selenium-Samples\dotnet-selenium-e2e\NUnitTestsWithSelenium\bin\Debug\netcoreapp2.2\NUnitTestsWithSelenium.pdb
